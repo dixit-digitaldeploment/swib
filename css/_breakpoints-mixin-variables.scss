@@ -1,36 +1,153 @@
-$breakpoints:( "xs":0, "sm":480px, "md":768px, "lg":992px, "xl":1200px, );
+/* source-sans-pro-latin-200-normal */
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 200;
+    src: url(../fonts/SourceSansPro-ExtraLight.ttf) format("truetype");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-display: swap;
+    font-weight: 200;
+    src: url(../fonts/SourceSansPro-ExtraLightItalic.ttf) format("truetype");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+    src: url(../fonts/SourceSansPro-Light.ttf) format("truetype");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-display: swap;
+    font-weight: 300;
+    src: url(../fonts/SourceSansPro-LightItalic.ttf) format("truetype");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(../fonts/SourceSansPro-Regular.ttf) format("truetype");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-display: swap;
+    font-weight: 400;
+    src: url(../fonts/SourceSansPro-Italic.ttf) format("truetype");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+    src: url(../fonts/SourceSansPro-Semibold.ttf) format("truetype");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-display: swap;
+    font-weight: 600;
+    src: url(../fonts/SourceSansPro-SemiboldItalic.ttf) format("truetype");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: bold;
+    src: url(../fonts/SourceSansPro-Bold.ttf) format("truetype");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-display: swap;
+    font-weight: bold;
+    src: url(../fonts/SourceSansPro-BoldItalic.ttf) format("truetype");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 800;
+    src: url(../fonts/SourceSansPro-Black.ttf) format("truetype");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-display: swap;
+    font-weight: 800;
+    src: url(../fonts/SourceSansPro-BlackItalic.ttf) format("truetype");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+        U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+$breakpoints: (
+    "xs": 0,
+    "sm": 480px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px
+);
+
 @mixin xl {
-    @media( min-width: map-get($breakpoints, 'xl')) {
+    @media (min-width: map-get($breakpoints, "xl")) {
         @content;
     }
 }
 
 @mixin xl {
-    @media( min-width: map-get($breakpoints, 'xl')) {
+    @media (min-width: map-get($breakpoints, "xl")) {
         @content;
     }
 }
 
 @mixin md {
-    @media( max-width: map-get($breakpoints, 'md')) {
+    @media (max-width: map-get($breakpoints, "md")) {
         @content;
     }
 }
 
 @mixin lg {
-    @media( max-width: map-get($breakpoints, 'lg')) {
+    @media (max-width: map-get($breakpoints, "lg")) {
         @content;
     }
 }
 
 @mixin desk {
-    @media( min-width: map-get($breakpoints, 'lg')) {
+    @media (min-width: map-get($breakpoints, "lg")) {
         @content;
     }
 }
 
 @mixin desklg {
-    @media( min-width: map-get($breakpoints, 'xl')) {
+    @media (min-width: map-get($breakpoints, "xl")) {
         @content;
     }
 }
@@ -48,7 +165,7 @@ $breakpoints:( "xs":0, "sm":480px, "md":768px, "lg":992px, "xl":1200px, );
 }
 
 //ini custom breakpoints
-@mixin breakpoint($bp:0) {
+@mixin breakpoint($bp: 0) {
     @media (min-width: $bp) {
         @content;
     }
@@ -91,7 +208,7 @@ $breakpoints:( "xs":0, "sm":480px, "md":768px, "lg":992px, "xl":1200px, );
 }
 
 @mixin secondary-font {
-    font-family:  "Source Sans 3", sans-serif;
+    font-family: "Source Sans Pro";
 }
 
 @mixin upper {
@@ -136,47 +253,56 @@ $breakpoints:( "xs":0, "sm":480px, "md":768px, "lg":992px, "xl":1200px, );
 }
 
 @mixin img-green {
-    filter: brightness(0) saturate(100%) invert(51%) sepia(78%) saturate(5573%) hue-rotate(149deg) brightness(94%) contrast(99%);
+    filter: brightness(0) saturate(100%) invert(51%) sepia(78%) saturate(5573%) hue-rotate(149deg) brightness(94%)
+        contrast(99%);
 }
 
 @mixin img-black {
-    filter: brightness(0) saturate(100%) invert(1%) sepia(77%) saturate(1660%) hue-rotate(166deg) brightness(90%) contrast(102%);
+    filter: brightness(0) saturate(100%) invert(1%) sepia(77%) saturate(1660%) hue-rotate(166deg) brightness(90%)
+        contrast(102%);
 }
 
 @mixin img-blue {
-    filter: brightness(0) saturate(100%) invert(11%) sepia(12%) saturate(4774%) hue-rotate(193deg) brightness(95%) contrast(96%);
+    filter: brightness(0) saturate(100%) invert(11%) sepia(12%) saturate(4774%) hue-rotate(193deg) brightness(95%)
+        contrast(96%);
 }
 
 //Variables
-$primary:#052E70;
-$secondary:#014796;
-$blue:#015FC9;
-$skyblue:#0077D9;
-$lightblue:#EFF7FF;
-$black:#222222;
-$white:#ffffff;
-$gray:#797979;
-$lightgray:#E1E0E0;
+$primary: #052e70;
+$secondary: #014796;
+$blue: #015fc9;
+$skyblue: #0077d9;
+$lightblue: #eff7ff;
+$black: #222222;
+$white: #ffffff;
+$gray: #797979;
+$lightgray: #e1e0e0;
 
-$orange:#D8790D;
-$yellow:#ECAF3B;
-$border-color:#D8612E;
-$darkblue:#193369;
-$red:#D60004;
-$red-hover:#C50105;
-$green:#5B7E15;
-$purple:#7A4090;
-$bg-blue:#14213f;
+$orange: #d8790d;
+$yellow: #ecaf3b;
+$border-color: #d8612e;
+$darkblue: #193369;
+$red: #d60004;
+$red-hover: #c50105;
+$green: #5b7e15;
+$purple: #7a4090;
+$bg-blue: #14213f;
 $primary-font: "Ubuntu", sans-serif;
-$secondary-font: "Source Sans 3", sans-serif;
-$shadow:0px 1px 3px 0px rgba(0, 0, 0, 0.15);
-// color paltte - 
-$colors:( "primary":$primary, "secondary":$secondary, "green":#008943, "black":#000, "lightgray":#F5F5F5);
+$secondary-font: "Source Sans Pro";
+$shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+// color paltte -
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "green": #008943,
+    "black": #000,
+    "lightgray": #f5f5f5
+);
 .test-btn {
     background-color: map-get($colors, "blue");
 }
 
-@mixin fancy-border($size:1px, $color:#000) {
+@mixin fancy-border($size: 1px, $color: #000) {
     border: $size solid $color;
     border-radius: 5px;
     -webkit-border-radius: 5px;
