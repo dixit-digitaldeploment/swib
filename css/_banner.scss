@@ -16,7 +16,7 @@
                 bottom: 0px;
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(0deg, rgba(8, 13, 23, 0.61) 0%, rgba(8, 13, 23, 0.61) 100%) no-repeat;
+                background: linear-gradient(180deg, rgba(8, 13, 23, 0) 0%, rgba(27, 27, 27, 0.61) 55.74%) no-repeat;
                 z-index: 1;
             }
         }
@@ -25,7 +25,7 @@
         > img {
             width: 100%;
             max-height: calc(100vh - 170px);
-            height: 600px;
+            height: 636px;
             object-fit: cover;
         }
     }
@@ -43,6 +43,9 @@
     .caption_wrap {
         display: flex;
         justify-content: center;
+        @media (max-width: 767px) {
+            height: 70vh;
+        }
     }
     .carousel-caption {
         position: absolute;
@@ -60,11 +63,10 @@
         h2 {
             color: #fff;
             text-shadow: none;
-            margin-bottom: 15px;
-            font-size: 58px;
+            font-size: 45px;
             font-style: normal;
-            font-weight: 700;
-            margin-bottom: 20px;
+            font-weight: 900;
+            margin-bottom: 24px;
             span {
                 font-size: 36px;
                 font-weight: normal;
@@ -73,18 +75,31 @@
         }
         p {
             color: $white;
-            font-size: 24px;
+            font-size: 32px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: 800;
             font-family: $primary-font;
+            line-height: normal;
         }
         .btn_sm {
             margin-top: 15px;
+            border-color: $white;
+            background: none;
+            color: $white;
+            &:hover,
+            &:focus-within {
+                background: $blue;
+                color: #fff;
+                border-color: $blue;
+                text-decoration: none;
+                img {
+                }
+            }
         }
         @include md {
-            text-align: left;
+            text-align: center;
             h1 {
-                font-size: 36px;
+                // font-size: 36px;
             }
         }
         @media (min-width: 768px) {
@@ -104,8 +119,10 @@
         z-index: 10;
         &:hover {
             // background: $secondary;
-            img{
-                filter: invert(47%) sepia(90%) saturate(3087%) hue-rotate(185deg) brightness(101%) contrast(92%);
+            img {
+                filter: brightness(0) saturate(100%) invert(56%) sepia(22%) saturate(267%) hue-rotate(178deg)
+                    brightness(94%) contrast(92%);
+                opacity: 0.8;
             }
         }
     }
@@ -173,6 +190,18 @@
 }
 
 .banner-buttons {
+    max-width: 800px;
+    margin: 0 auto;
+    transform: translateY(-60px);
+    position: relative;
+    z-index: 1;
+    @media (max-width: 1024px) {
+        transform: translateY(0); 
+        padding: 40px 0;
+        .row{
+            row-gap: 24px;
+        }
+    }
     a {
         text-decoration: none;
         &:hover {
@@ -180,32 +209,34 @@
         }
     }
     .bt_col {
-        max-width: 20%;
+        max-width: 25%;
         flex: auto;
         &:not(:last-child) {
-            border-right: 0.5px solid var(--White, #fff);
+            // border-right: 0.5px solid var(--White, #fff);
         }
         @media (max-width: 1024px) {
-            max-width: 100%;
+            max-width: 50%;
             border-right: none;
         }
     }
     .btn_card {
-        padding: 24px;
-        background: #015fc9;
+        // padding: 24px;
+        // background: #015fc9;
+        // height: 100%;
         .btn_icon {
-            width: 72px;
-            height: 72px;
-            min-width: 72px;
-            min-height: 72px;
+            width: 120px;
+            height: 120px;
+            min-width: 120px;
+            min-height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
+            border: 3px solid var(--Golden-Yellow, #febe10);
+            background: var(--Dark-Navy-Blue, #002f54);
             // background: $white;
             margin-bottom: 16px;
             // margin-right: 16px;
             border-radius: 50%;
-            border: 2px solid var(--White, #fff);
             @include md {
                 // width: 30px;
                 // height: 30px;
@@ -223,36 +254,27 @@
             text-align: center;
             color: $white;
             font-family: $primary-font;
+            max-width: 270px;
+            margin: auto;
+        }
+        .btn_txt {
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 900;
+            color: $primary;
         }
         p {
             color: $white;
         }
-        // &.red {
-        //     background: #ab1c21;
-        //     &:hover {
-        //         background: #9b1a1f;
-        //     }
-        // }
-        // &.green {
-        //     background: $green;
-        //     &:hover {
-        //         background: #496412;
-        //     }
-        // }
-        // &.purple {
-        //     background: $purple;
-        //     &:hover {
-        //         background: #603372;
-        //     }
-        // }
-        // &.blue {
-        //     background: #005598;
-        //     &:hover {
-        //         background: #014275;
-        //     }
-        // }
         &:hover {
-            background: #052e70;
+            .btn_icon {
+                background: #febe10;
+                img {
+                    filter: brightness(0) saturate(100%) invert(14%) sepia(30%) saturate(3402%) hue-rotate(183deg)
+                        brightness(98%) contrast(102%);
+                }
+            }
+            // background: #052e70;
         }
     }
     @include md {
@@ -325,11 +347,16 @@
             padding: 32px 0;
             left: unset;
             right: unset;
+            align-self: center;
             h2 {
-                // font-size: 38px;
+                font-size: 36px;
+                font-weight: 500;
                 span {
                     // font-size: 28px;
                 }
+            }
+            p {
+                font-size: 18px;
             }
         }
     }
