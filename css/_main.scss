@@ -230,6 +230,7 @@
     margin: auto;
     align-items: center;
     text-decoration: none;
+    font-variant-numeric: lining-nums tabular-nums;
     h3 {
       font-size: 60px;
       font-style: normal;
@@ -273,8 +274,14 @@
     margin-top: 32px;
   }
   .grey {
+    background-color: #E3E3E3;
     padding: 32px;
     height: 100%;
+    margin: 0 20px;
+  }
+  h3{
+    color: #002F54;
+    margin-bottom: 16px;
   }
   .job_list {
     .job {
@@ -2742,6 +2749,7 @@ p.date {
               color: $primary;
               // font-size: 16px;
               // font-style: normal;
+              white-space: normal;
               font-weight: 600;
               &:hover {
                 color: $blue;
@@ -2910,7 +2918,7 @@ p.date {
   }
   &.two-column {
     .content-row {
-      grid-template-columns: 220px auto;
+      grid-template-columns: 220px minmax(0, 1fr);
       .left_sidebar {
         @media (max-width: 768px) {
           order: 2;
@@ -2920,7 +2928,7 @@ p.date {
   }
   @media (max-width: 768px) {
     .content-row {
-      grid-template-columns: 1fr !important;
+      grid-template-columns: 100% !important;
       grid-column-gap: 0px;
       grid-row-gap: 20px;
     }

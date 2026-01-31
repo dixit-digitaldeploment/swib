@@ -418,66 +418,66 @@ $(".kb-table").each(function () {
 
 
 
-// jQuery(document).ready(function ($) {
-//   const $menuWrapper = $(".menu-wrapper"); // limit to this container
+jQuery(document).ready(function ($) {
+  const $menuWrapper = $(".menu-wrapper"); // limit to this container
 
-//   // 1️⃣ Add + / - icon for items with children
-//   $menuWrapper.find(".menu-item-has-children").each(function () {
-//     if (!$(this).find("> .plus-mins").length) {
-//       $(this).prepend(
-//         '<div class="plus-mins" tabindex="0" aria-expanded="false" role="button" aria-label="Toggle submenu"></div>'
-//       );
-//     }
-//   });
+  // 1️⃣ Add + / - icon for items with children
+  $menuWrapper.find(".menu-item-has-children").each(function () {
+    if (!$(this).find("> .plus-mins").length) {
+      $(this).prepend(
+        '<div class="plus-mins" tabindex="0" aria-expanded="false" role="button" aria-label="Toggle submenu"></div>'
+      );
+    }
+  });
 
-//   // 2️⃣ Toggle submenu on click or keyboard
-//   $menuWrapper.on("click keypress", ".plus-mins", function (e) {
-//     if (e.type === "click" || e.key === "Enter" || e.key === " ") {
-//       e.preventDefault();
-//       const $toggle = $(this);
-//       const $submenu = $toggle.siblings("ul").first();
+  // 2️⃣ Toggle submenu on click or keyboard
+  $menuWrapper.on("click keypress", ".plus-mins", function (e) {
+    if (e.type === "click" || e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      const $toggle = $(this);
+      const $submenu = $toggle.siblings("ul").first();
 
-//       $submenu.slideToggle(200);
-//       const isOpen = $toggle.attr("aria-expanded") === "true";
+      $submenu.slideToggle(200);
+      const isOpen = $toggle.attr("aria-expanded") === "true";
 
-//       $toggle.attr("aria-expanded", !isOpen);
-//       // $toggle.text(isOpen ? '+' : '–');
-//     }
-//   });
+      $toggle.attr("aria-expanded", !isOpen);
+      // $toggle.text(isOpen ? '+' : '–');
+    }
+  });
 
-//   // 3️⃣ On page load: open only active paths within this menu
-//   $menuWrapper
-//     .find(
-//       ".current-menu-item, .current_page_item, .current_page_parent, .current-menu-ancestor"
-//     )
-//     .each(function () {
-//       const $activeLi = $(this);
+  // 3️⃣ On page load: open only active paths within this menu
+  $menuWrapper
+    .find(
+      ".current-menu-item, .current_page_item, .current_page_parent, .current-menu-ancestor"
+    )
+    .each(function () {
+      const $activeLi = $(this);
 
-//       // Open its own submenu if present
-//       const $submenu = $activeLi.children("ul");
-//       if ($submenu.length) {
-//         $submenu.css("display", "block");
-//         const $toggle = $activeLi.children(".plus-mins");
-//         $toggle.text("").attr("aria-expanded", "true");
-//       }
+      // Open its own submenu if present
+      const $submenu = $activeLi.children("ul");
+      if ($submenu.length) {
+        $submenu.css("display", "block");
+        const $toggle = $activeLi.children(".plus-mins");
+        $toggle.text("").attr("aria-expanded", "true");
+      }
 
-//       // Open all ancestor submenus leading to this item
-//       $activeLi.parents("ul").each(function () {
-//         $(this).css("display", "block");
-//         const $toggle = $(this).siblings(".plus-mins");
-//         $toggle.text("").attr("aria-expanded", "true");
-//       });
-//     });
-//   $(".sidebar_title").on("click", function () {
-//     if ($(window).width() < 1200) {
-//       $(".menu-wrapper").toggleClass("expanded");
-//     }
-//   });
+      // Open all ancestor submenus leading to this item
+      $activeLi.parents("ul").each(function () {
+        $(this).css("display", "block");
+        const $toggle = $(this).siblings(".plus-mins");
+        $toggle.text("").attr("aria-expanded", "true");
+      });
+    });
+  $(".sidebar_title").on("click", function () {
+    if ($(window).width() < 1200) {
+      $(".menu-wrapper").toggleClass("expanded");
+    }
+  });
 
-//   // Optional: remove expanded class when resizing above 1200px
-//   $(window).on("resize", function () {
-//     if ($(window).width() >= 1200) {
-//       $(".menu-wrapper").removeClass("expanded");
-//     }
-//   });
-// });
+  // Optional: remove expanded class when resizing above 1200px
+  $(window).on("resize", function () {
+    if ($(window).width() >= 1200) {
+      $(".menu-wrapper").removeClass("expanded");
+    }
+  });
+});
